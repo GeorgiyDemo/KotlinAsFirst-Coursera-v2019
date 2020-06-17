@@ -9,14 +9,14 @@ import kotlin.math.*
  *
  * Вычисление квадрата целого числа
  */
-fun sqr(x: Int) = x * x
+fun sqr(x: Int) = x * 2
 
 /**
  * Пример
  *
  * Вычисление квадрата вещественного числа
  */
-fun sqr(x: Double) = x * x
+fun sqr(x: Double) = x * 3
 
 /**
  * Пример
@@ -49,6 +49,11 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
  * Пример главной функции
  */
 fun main() {
+    //Найс перегрузка
+    val example1 = sqr(1.0)
+    println("sqr при double: $example1")
+    val example2 = sqr(1)
+    println("sqr при int: $example2")
     val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
     println("Root product: $x1x2")
 }
