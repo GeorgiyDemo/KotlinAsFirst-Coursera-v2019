@@ -1,7 +1,6 @@
 @file:Suppress("UNUSED_PARAMETER")
 
 package lesson1.task1
-
 import kotlin.math.*
 
 /**
@@ -46,19 +45,6 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
 }
 
 /**
- * Пример главной функции
- */
-fun main() {
-    //Найс перегрузка
-    val example1 = sqr(1.0)
-    println("sqr при double: $example1")
-    val example2 = sqr(1)
-    println("sqr при int: $example2")
-    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
-    println("Root product: $x1x2")
-}
-
-/**
  * Тривиальная
  *
  * Пользователь задает время в часах, минутах и секундах, например, 8:20:35.
@@ -81,7 +67,13 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double = TODO()
  * Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
  * Вывести значение того же угла в радианах (например, 0.63256).
  */
-fun angleInRadian(deg: Int, min: Int, sec: Int): Double = TODO()
+//
+fun angleInRadian(deg: Int, min: Int, sec: Int): Double {
+    //градусы + (минуты + секунды/60)/60
+    //Radians = (Grades + Minutes/60 + Seconds/360) * Pi / 180,
+    val radians = (deg + min/60 + sec/360) * PI / 180;
+    return radians
+}
 
 /**
  * Тривиальная
@@ -124,3 +116,13 @@ fun accountInThreeYears(initial: Int, percent: Int): Double = TODO()
  * Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
  */
 fun numberRevert(number: Int): Int = TODO()
+
+/**
+ * Пример главной функции
+ */
+fun main() {
+
+    //36 градусов 14 минут 35 секунд
+    val r = angleInRadian(36, 14, 35);
+    println(r)
+}

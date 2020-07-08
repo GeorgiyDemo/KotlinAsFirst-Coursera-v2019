@@ -22,8 +22,9 @@ fun desc(a: Int, b: Int, c: Int) : Double
 
 @Test
 fun main() {
+    //Assert веселый
     assertEquals(-5.0, desc(3,13, -10))
-    //b^
+
     val result = desc(3,13, -10)
     print("Результат вычислений:")
     print(result)
