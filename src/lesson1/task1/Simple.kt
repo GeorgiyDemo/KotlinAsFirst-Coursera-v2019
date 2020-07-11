@@ -50,7 +50,13 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
  * Пользователь задает время в часах, минутах и секундах, например, 8:20:35.
  * Рассчитать время в секундах, прошедшее с начала суток (30035 в данном случае).
  */
-fun seconds(hours: Int, minutes: Int, seconds: Int): Int = TODO()
+fun f_seconds(hours: Int, minutes: Int, seconds: Int): Int
+{
+    val buffer_minutes = minutes * 60;
+    val buffer_hours = hours * 60 * 60;
+    val result = buffer_hours + buffer_minutes + seconds;
+    return result;
+}
 
 /**
  * Тривиальная
@@ -124,5 +130,6 @@ fun main() {
 
     //36 градусов 14 минут 35 секунд
     val r = angleInRadian(36, 14, 35);
-    println(r)
+    println(r);
+    println(f_seconds(8,20,35));
 }

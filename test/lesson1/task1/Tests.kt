@@ -46,13 +46,6 @@ class Tests {
         assertEquals(2.0, quadraticRootProduct(1.0, 3.0, 2.0), 1e-13)
     }
 
-    @Test
-    @Tag("Trivial")
-    fun seconds() {
-        assertEquals(30035, seconds(8, 20, 35))
-        assertEquals(86400, seconds(24, 0, 0))
-        assertEquals(13, seconds(0, 0, 13))
-    }
 
     @Test
     @Tag("Trivial")
